@@ -6,6 +6,15 @@
 
 A comprehensive Python library for volatility surface construction, SVI parameterization, and real-time arbitrage detection in options markets.
 
+## 🎨 Visual Showcase
+
+<div align="center">
+  <img src="visuals/svi_surface.png" alt="SVI Volatility Surface" width="45%">
+  <img src="visuals/svi_surface_evolution.gif" alt="SVI Surface Evolution" width="45%">
+</div>
+
+*Left: Interactive SVI volatility surface | Right: Animated surface evolution*
+
 ## 🎯 Features
 
 ### Core Functionality
@@ -79,6 +88,9 @@ python examples/dashboard.py
 # Access at: http://127.0.0.1:8050
 ```
 
+![Interactive Dashboard](visuals/svi_surface.png)
+*Interactive dashboard for real-time volatility surface exploration and parameter adjustment*
+
 ## 📊 Visualization
 
 ### Static Visualizations
@@ -86,6 +98,36 @@ python examples/dashboard.py
 # Generate static plots and animated GIFs
 python examples/generate_visuals.py
 ```
+
+The project generates comprehensive visualizations for volatility surface analysis:
+
+#### SVI Volatility Surface
+![SVI Surface](visuals/svi_surface.png)
+*3D visualization of the SVI volatility surface showing the characteristic smile shape*
+
+#### Spline Interpolation Surface
+![Spline Surface](visuals/spline_surface.png)
+*Cubic spline interpolation providing smooth volatility surface representation*
+
+#### Greeks Surfaces
+**Delta Surface** - Price sensitivity to underlying asset
+![Delta Surface](visuals/deltas_surface.png)
+
+**Gamma Surface** - Delta sensitivity to underlying asset
+![Gamma Surface](visuals/gammas_surface.png)
+
+**Vega Surface** - Price sensitivity to volatility
+![Vega Surface](visuals/vegas_surface.png)
+
+**Theta Surface** - Price sensitivity to time decay
+![Theta Surface](visuals/thetas_surface.png)
+
+**Rho Surface** - Price sensitivity to interest rates
+![Rho Surface](visuals/rhos_surface.png)
+
+#### Animated SVI Surface Evolution
+![SVI Surface Evolution](visuals/svi_surface_evolution.gif)
+*Animated GIF showing how the SVI surface evolves with parameter changes*
 
 ### Interactive Dashboard Features
 - **Real-time SVI parameter adjustment**
@@ -132,6 +174,9 @@ The Stochastic Volatility Inspired (SVI) model parameterizes the total variance 
 σ²(k,T) = a + b[ρ(k-m) + √((k-m)² + σ²)]
 ```
 
+![SVI Model Visualization](visuals/svi_surface.png)
+*SVI volatility surface showing the characteristic smile shape with parameter controls*
+
 **Parameters:**
 - `a`: Vertical offset (level)
 - `b`: Slope parameter
@@ -161,6 +206,9 @@ Complete Greeks calculation engine supporting:
 - **Theta**: Price sensitivity to time
 - **Vega**: Price sensitivity to volatility
 - **Rho**: Price sensitivity to interest rates
+
+![Greeks Surfaces](visuals/deltas_surface.png)
+*Delta surface showing price sensitivity across strikes and maturities*
 
 ## 📈 Usage Examples
 
